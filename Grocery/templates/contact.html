@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<!-- banner -->
+<div class="section">
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-page">Contact Us</div>
+                    <p class="content-page">Any query, Give feedback</p>
+                    <p class="content-page">Lets interact !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- contact -->
+<div class="section contact overlap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="contact-page">CONNECT WITH US</h3>
+                <div class="address">
+                    <p>ADDRESS: Plot No. 37P, near Anand Multi Speciality Hospital, Sector 56, Gurugram,
+                        Haryana,INDIA-122011</p>
+                    <p>PHONE: +91 93115-67176</p>
+                    <p>EMAIL: connect@achiredo.com</p>
+                </div>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6928.053262152676!2d77.0911309501928!3d28.42912910074471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d220118226ded%3A0x571f9c1e47e6025e!2sHUDA%20Market%2C%20Sector%2056!5e0!3m2!1sen!2sin!4v1702261558408!5m2!1sen!2sin"
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="content">
+                    <h3 class="contact-page">GET A CALLBACK</h3>
+                    <form action="/contact" method="post" onsubmit="return validateContact()">
+                        <div class="form-group">
+                            <input type="text" class="form-control border-0" id="name" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control border-0" id="email" name="email"
+                                placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control border-0" id="phone" name="phone" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control border-0" id="subject" name="subject"
+                                placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control border-0" id="message" rows="6"
+                                placeholder="Message"></textarea>
+                        </div>
+                        <input id="submit" type="button" onclick="saveContact()" class="btn btn-pri btn-pill float-right mb-4" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER START -->
+<div class="footer">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-menu">
+                    <p>+91-8175838371</p>
+                    <p>ankitsharma5466@gmail.com</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://twitter.com/AnkitSh53223924"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100008169342792&mibextid=ZbWKwL"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/@ankitsharma8266?si=dZlcUNEFsL3QG0KN"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://instagram.com/ankitsharma7463?igshid=OGQ5ZDc2ODk2ZA=="><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/ankit-sharma-6a9b07190/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>Copyright &copy;2023</p>
+        </div>
+    </div>
+</div>
+<!-- FOOTER END -->
+
+<script src="/static/js/user.js"></script>
+{% endblock %}

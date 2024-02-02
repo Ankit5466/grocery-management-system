@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+            <h1>Basic Actions</h1>
+            <a href="/login"><button class="btn btn-primary">Login Home</button></a>
+            <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+            <hr>
+
+            <h1>Add/Edit Posts</h1>
+
+            <form name="sentMessage" action="/edit/{{p_id}}" method="post" novalidate>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="Product Name" id="name" name="name" required
+                            data-validation-required-message="">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Description</label>
+                        <input type="text" class="form-control" placeholder="Description" id="description" name="description"
+                            required data-validation-required-message=""
+                            >
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Category</label>
+                        <input type="text" class="form-control" placeholder="Category" id="category" name="category"
+                            data-validation-required-message="">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Quantity</label>
+                        <input type="number" class="form-control" placeholder="Quantity" name="quantity" id="quantity">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                        <label>Price</label>
+                        <input type="number" class="form-control" placeholder="Price" name="price" id="price">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

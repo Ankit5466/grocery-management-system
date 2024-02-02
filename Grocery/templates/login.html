@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row d-flex">
+        <div class="col-lg-6">
+            <div class="row justify-content-center">
+                <div class="text-center text">
+                    <div class="image1"></div>
+                    <p class="">Groceries Delivered in 10 minutes</p>
+                    <div>
+                        <a href="/register"><button class="btn btn-outline-danger px-4 py-2 btn-pill">Create Your
+                                Account</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row justify-content-center">
+                <div class="login back">
+                    <div class="text-center">
+                        <h4 class="font-weight-set">Login</h4>
+                        <p class="text-muted font-weight-set">Enter Email and Password</p>
+                    </div>
+                    <form action="" method="post">
+                        <div class="form-group ">
+                            <input id="email" class="form-control border-0 h-auto p-1" type="email" placeholder="Email" name="email" autocomplete="off" size="30" required>
+                        </div>
+                        <div class="form-group">
+                            <input id="password" class="form-control border-0 h-auto p-1" type="password" placeholder="Password" name="password" autocomplete="off" size="30" required>
+                        </div>
+                        <div class="text-right">
+                            <a href="" data-toggle="modal" data-target="#exampleModal">Forget Password ?</a>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-pri btn-pill px-4 py-2">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Reset Password</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="" method="">
+            <input id="email2" type="email" class="form-control" name="email" placeholder="Email">
+            <button type="submit" class="btn btn-pri btn-pill float-right">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <h1 class="backg">Manage Grocery</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>pro_id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{product[0]}}</td>
+                    <td>{{product[1]}}</td>
+                    <td>{{product[2]}}</td>
+                    <td>{{product[3]}}</td>
+                    <td>{{product[4]}}</td>
+                    <td>{{product[5]}}</td>
+                    <!-- <td><a href="/edit/{{product.p_id}}"><button class="btn btn-primary">edit</button></a></td>
+                    <td><a href="/delete/{{product[0]}}"><button class="btn btn-primary">delete</button></a></td> -->
+                    <td><a href="/edit/{{product.p_id}}"><button class="btn btn-primary">edit</button></a></td>
+                    <td><button id="deleteButton" class="btn btn-primary">delete</button></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

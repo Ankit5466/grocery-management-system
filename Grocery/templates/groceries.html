@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-sm-6 navigate">
+            <p class="mb-0">Delivery in 20 minutes</p>
+            <p class="mt-0 mb-0">Location: <span
+                    style="font-family: Arial, Helvetica, sans-serif; font-weight: 10; font-size: 14px;">BLW,
+                    Varanasi</span></p>
+        </div>
+        <div class="col-sm-6">
+            <form method="get" action="/groceries" class="form-inline my-2 my-lg-0 justify-content-center">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search"
+                    id="search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+<hr style="margin-top: 0;">
+
+<div class="container">
+    <div class="row" id="grocery-list" >
+    </div>
+</div>
+
+
+<script src="/static/js/grocery.js"></script>
+{% endblock %}

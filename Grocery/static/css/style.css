@@ -1,0 +1,449 @@
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+.navbar{
+    background-color: #F64E60;
+    /* position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 999; */
+}
+
+.navbar-nav li{
+    padding-left: 16px;
+}
+
+.image1{
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/static/img/subg.png);
+    position: relative;
+    margin-left: 20px;
+}
+
+.login{
+    position: relative;
+    top: 92px;
+}
+
+.register{
+    position: relative;
+    top: 36px;
+}
+
+.register input{
+    margin-bottom: -4px;
+}
+
+.back{
+    background-color: whitesmoke;
+    padding: 40px;
+    box-shadow: 0px 10px 10px rgba(219, 218, 218, 0.527);
+}
+
+.text-muted{
+    color: grey;
+}
+
+.font-weight-set{
+    font-weight: 500;
+}
+
+.btn.btn-pri{
+    background-color: #F64E60;
+    color: white;
+    border: #F64E60;
+    margin-top: 1rem;
+}
+
+.btn.btn-pri:hover{
+    background-color: #f8283d;
+    box-shadow: 0px 4px 16px rgba(244, 85, 85, 0.527);
+}
+
+/* .btn-pill{
+    border-radius: 2rem;
+} */
+
+.btn-outline-danger:hover{
+    box-shadow: 0px 4px 16px rgba(244, 85, 85, 0.527);
+}
+
+.text-right a{
+    text-decoration: none;
+    font-family: Poppins, Helvetica, "sans-serif";
+    font-size: 15px;
+    color: rgb(197, 195, 195);
+}
+
+.text-right a:hover{
+    color: #F64E60;
+    transition: all 0.4s ease;
+}
+
+.text{
+    position: relative;
+    top: 72px;
+    color: grey;
+    font-weight: 600;
+}
+
+.mar {
+    margin: 0;
+}
+
+.banner{
+    background: url(/static/img/banner.png) left center no-repeat;
+    height: 350px;
+}
+
+.banner .title-page{
+    color: white;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.banner .container{
+    padding-top: 50px;
+}
+
+.content-page{
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.section.overlap{
+    position: relative;
+    z-index: 100;
+}
+
+.section > .container {
+    background-color: whitesmoke;
+    margin-top: -70px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 435px) {
+    .section > .container {
+        margin-top: 0px;
+    }
+}
+
+.contact-page{
+    color: black;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin: 30px;
+    margin-left: 0px;
+}
+.address p{
+    font-size: 14px;
+    margin: 0;
+    line-height: 17px;
+}
+
+
+.map{
+    margin-top: 20px;
+}
+
+.carousel {
+    width: auto;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+}
+
+.carousel .carousel-item{
+    height: 300px;
+}
+
+.carousel-item img{
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    height: 300px;
+}
+
+.carousel-inner {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.card-home{
+    min-width: 350px;
+    margin-right: 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.card-home img{
+    border-radius: 20px;
+    height: 180px;
+}
+
+.scro::-webkit-scrollbar {
+    display: none;
+    }
+
+.scroll-card{
+    height: 180px;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+/* navigate */
+.navigate {
+    font-family: Poppins, Helvetica, "sans-serif";
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* card groceries */
+.card-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .col-md-2{
+        width: 50%;
+    }
+}
+
+
+.gros-banner{
+    background-color: #8ba6f2;
+    width: 100%;
+    height: 140px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.gros-heading{
+    font-size: 50px;
+    color: white;
+    font-weight: bolder;
+}
+
+.gros-products{
+    margin-top: 35px;
+    padding: 15px;
+}
+
+.gros-products div{
+    padding-bottom: 10px;
+}
+
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.backg{
+    width: 100%;
+}
+
+
+/* grocery list */
+
+ /* Style for the card container */
+ .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Style for each grocery card */
+.card {
+    display: inline-block !important;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    /* padding: 15px; */
+    width: 220px;
+}
+
+.card img{
+    width: 100%;
+    height: 134px;
+}
+
+.card h3 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: smaller;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-body p{
+    line-height: 5px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.card-body button{
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer {
+    position: relative;
+    margin-top: 45px;
+    background: #7698f5;
+}
+
+.footer .container-fluid {
+    padding: 60px 0 0 0;
+}
+
+.footer .footer-info {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .footer-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer-menu p {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 0 15px;
+    border-right: 1px solid #ffffff;
+}
+
+.footer .footer-menu p:last-child {
+    border: none;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 15px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #414141;
+}
+
+.footer .copyright {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer .copyright::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    top: 0;
+    left: 25%;
+    background: rgba(256, 256, 256, .2);
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+@media (max-width: 575.98px) {
+    .footer .footer-menu p {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 0 5px;
+    }
+}
+
+
+
