@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from datetime import datetime
 import mysql.connector
 
@@ -63,12 +63,6 @@ def dashboard():
     cursor.execute("SELECT p_id, name, description, category, quantity, price FROM products where deleted = 0")
     products = cursor.fetchall()
     return render_template('dashboard.html', products=products)
-
-# @app.route('/delete/<int:p_id>', methods=['GET','POST'])
-# def delete(p_id):
-#     cursor.execute("DELETE FROM products WHERE p_id = %s", (p_id,))
-#     conn.commit()
-#     return redirect('/dashboard')
 
 app.register_blueprint(user.grocery_app)
 app.register_blueprint(grocery.grocery_app)

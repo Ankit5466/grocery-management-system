@@ -19,7 +19,8 @@
             </thead>
             <tbody>
                 {% for product in products %}
-                <tr>
+                <tr data-product-id="{{ product[0] }}">
+                <!-- <tr> -->
                     <td>{{product[0]}}</td>
                     <td>{{product[1]}}</td>
                     <td>{{product[2]}}</td>
@@ -27,13 +28,15 @@
                     <td>{{product[4]}}</td>
                     <td>{{product[5]}}</td>
                     <!-- <td><a href="/edit/{{product.p_id}}"><button class="btn btn-primary">edit</button></a></td>
-                    <td><a href="/delete/{{product[0]}}"><button class="btn btn-primary">delete</button></a></td> -->
+                    <td><a href="/delete/{{product[0]}}"><button class="btn btn-primary" onclick="">delete</button></a></td> -->
                     <td><a href="/edit/{{product.p_id}}"><button class="btn btn-primary">edit</button></a></td>
-                    <td><button id="deleteButton" class="btn btn-primary">delete</button></td>
+                    <td><button class="btn btn-primary deleteButton" onclick="removeProduct()">delete</button></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
 </div>
+
+<script src="/static/js/grocery.js"></script>
 {% endblock %}

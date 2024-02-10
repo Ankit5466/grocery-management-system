@@ -34,7 +34,7 @@ function getGroceryData() {
                     cardContainer.append(cardHtml);
                 });
             } else {
-                cardContainer.html('No data available.');
+                cardContainer.html('No Item available.');
             }
         },
         error: function (xhr, status, error) {
@@ -166,5 +166,59 @@ function displayGroceryDetails(data) {
 }
 
 
+// document.addEventListener("DOMContentLoaded", function() {
+//     $('tbody').on('click', '.deleteButton', function(event) {
+//         // Find the closest <tr> element to the clicked delete button
+//         var row = $(this).closest('tr');
+//         // Find the product ID from the first <td> element within the row
+//         var productId = row.find('td:first').text().trim();
+
+//         // Send an AJAX request to delete the product
+//         deleteGrocery(productId, row);
+//     });
+
+// function deleteGrocery(productId, row) {
+//     $.ajax({
+//         url: 'http://127.0.0.1:5000/api/v1/grocery/grocery-delete/' + productId,
+//         type: 'DELETE',
+//         success: function(response) {
+//             // Handle success response
+//             console.log(response.message); // Log success message
+//             // You can update the UI or take any other action here
+//             // For example, remove the product element from the UI
+//             row.remove();
+//             // alert('Product removed successfully!');
+//         },
+//         error: function(xhr, status, error) {
+//             // Handle error response
+//             var errorMessage = xhr.responseJSON.error || 'Something went wrong';
+//             console.error(errorMessage); // Log error message
+//             // You can display an error message to the user or take any other action here
+//         }
+//     });
+// }
+// });
 
 
+
+function removeProduct() {
+    $('tbody').on('click', '.deleteButton', function () {
+        var productId = $(this).closest('tr').data('product-id');
+        console.log("Product ID:", productId);
+        var row = $(this).closest('tr');
+
+
+        $.ajax({
+            url: 'http://127.0.0.1:5000/api/v1/grocery/grocery-delete/' + productId,
+            type: 'DELETE',
+            success: function () {
+                alert('Product removed successfully!');
+                row.remove();
+            },
+            error: function (xhr, status, error) {
+                var errorMessage = xhr.responseJSON.error || 'Something went wrong';
+                console.error(errorMessage);
+            }
+        });
+    });
+}

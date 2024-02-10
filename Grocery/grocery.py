@@ -83,7 +83,7 @@ def delete_grocery(p_id):
 
         cursor.execute("UPDATE products SET deleted = 1 WHERE p_id = %s", (p_id,))
         conn.commit()
-        return jsonify({"message": "Product removed successfully"})
+        return jsonify({"message": "Product removed successfully"}), 200
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
