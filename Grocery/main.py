@@ -54,15 +54,21 @@ def register():
 def contact():
     return render_template("contact.html", success=True)
 
-@app.route('/edit/<int:p_id>', methods=['GET', 'POST'])
-def edit(p_id):
-    return render_template("edit.html")
-
-@app.route('/dashboard', methods=['GET', 'POST'])
+@app.route('/dashboard')
 def dashboard():
-    cursor.execute("SELECT p_id, name, description, category, quantity, price FROM products where deleted = 0")
+    cursor.execute("SELECT p_id, name, description, category, quantity, price FROM products WHERE deleted = 0")
     products = cursor.fetchall()
     return render_template('dashboard.html', products=products)
+
+@app.route('/edit/<int:p_id>', methods=['GET'])
+def edit(p_id):
+    cursor.execute("SELECT name, description, category, quantity, price FROM products WHERE p_id = %s AND deleted = 0", (p_id,))
+    product = cursor.fetchone()
+    if product:
+        return render_template("edit.html", p_id=p_id, product=product)
+    else:
+        # Handle case when product with given ID is not found
+        return "Product not found", 404
 
 app.register_blueprint(user.grocery_app)
 app.register_blueprint(grocery.grocery_app)

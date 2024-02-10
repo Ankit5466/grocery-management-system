@@ -98,10 +98,5 @@ def admin_grocery_list():
 
     return jsonify(products_list)
 
-# @grocery_app.route(constant.GROCERY_URL + '/manage-grocery', methods=['GET'])
-# def dashboard():
-#     cursor.execute("SELECT p_id, name, description, category, quantity, price FROM products where deleted = 0")
-#     products = cursor.fetchall()
-#     return jsonify(products)
 
 

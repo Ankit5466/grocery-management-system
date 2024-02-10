@@ -11,51 +11,42 @@
             <a href="/logout"><button class="btn btn-primary">Logout</button></a>
             <hr>
 
-            <h1>Add/Edit Posts</h1>
+            <h1>Update Grocery</h1>
 
-            <form name="sentMessage" action="/edit/{{p_id}}" method="post" novalidate>
+            <form name="sentMessage" action="/update/{{p_id}}" method="post" novalidate>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Name</label>
-                        <input type="text" class="form-control" placeholder="Product Name" id="name" name="name" required
-                            data-validation-required-message="">
-                        <p class="help-block text-danger"></p>
+                        <input type="text" class="form-control" placeholder="Product Name" id="name" name="name" value="{{product[0]}}">
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Description</label>
-                        <input type="text" class="form-control" placeholder="Description" id="description" name="description"
-                            required data-validation-required-message=""
-                            >
-                        <p class="help-block text-danger"></p>
+                        <input type="text" class="form-control" placeholder="Description" id="description" name="description" value="{{product[1]}}">
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Category</label>
-                        <input type="text" class="form-control" placeholder="Category" id="category" name="category"
-                            data-validation-required-message="">
-                        <p class="help-block text-danger"></p>
+                        <input type="text" class="form-control" placeholder="Category" id="category" name="category" value="{{product[2]}}">
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Quantity</label>
-                        <input type="number" class="form-control" placeholder="Quantity" name="quantity" id="quantity">
-                        <p class="help-block text-danger"></p>
+                        <input type="number" class="form-control" placeholder="Quantity" name="quantity" id="quantity" value="{{product[3]}}">
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Price</label>
-                        <input type="number" class="form-control" placeholder="Price" name="price" id="price">
-                        <p class="help-block text-danger"></p>
+                        <input type="number" class="form-control" placeholder="Price" name="price" id="price" value="{{product[4]}}">
                     </div>
                 </div>
                 <br>
                 <div id="success"></div>
-                <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>
