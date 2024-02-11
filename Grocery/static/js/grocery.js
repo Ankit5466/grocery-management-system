@@ -187,3 +187,32 @@ function removeProduct() {
         });
     });
 }
+
+
+//edit grocery
+function editGrocery() {
+    var url = window.location.href;
+    var parts = url.split('/');
+    var id = parts[parts.length - 1];
+    id = parseInt(id);
+
+    var formData = {
+        quantity: $('#quantity').val(),
+        price: $('#price').val()
+    };
+
+
+    $.ajax({
+        type: 'PUT',
+        url: 'http://127.0.0.1:5000/api/v1/grocery/grocery-update/' + id,
+        contentType: 'application/json',
+        data: JSON.stringify(formData),
+        success: function() {
+            alert("item updated successfully");
+        },
+        error: function(xhr, status, error) {
+            console.error(xhr.responseText);
+            alert("An error occurred while updating the product.");
+        }
+    });
+}

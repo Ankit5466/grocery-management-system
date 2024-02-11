@@ -67,7 +67,6 @@ def edit(p_id):
     if product:
         return render_template("edit.html", p_id=p_id, product=product)
     else:
-        # Handle case when product with given ID is not found
         return "Product not found", 404
 
 app.register_blueprint(user.grocery_app)
